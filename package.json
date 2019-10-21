@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/MadalinaJ/gallery-shop/issues"
   },
-  "homepage": "https://github.com/MadalinaJ/gallery-shop#readme"
+  "homepage": "https://github.com/MadalinaJ/gallery-shop#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "request": "^2.88.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
