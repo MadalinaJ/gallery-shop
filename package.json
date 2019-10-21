@@ -1,0 +1,19 @@
+{
+  "name": "gallery-shop",
+  "version": "1.0.0",
+  "description": "e-commerce",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test&& jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadalinaJ/gallery-shop.git"
+  },
+  "author": "madalina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadalinaJ/gallery-shop/issues"
+  },
+  "homepage": "https://github.com/MadalinaJ/gallery-shop#readme"
+}
