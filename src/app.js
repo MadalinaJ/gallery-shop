@@ -1,10 +1,30 @@
-const express = require("express");
+const path = require("path");
+var ejs = require("ejs");
+const express = require('express');
+const bodyParser = require('body-parser');
+const staticController = require('./controllers/staticController');
+
 const app = express();
 
-const appConfig = require("./config/main-config.js");
-const routeConfig = require("./config/route-config.js");
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-appConfig.init(app, express);
-routeConfig.init(app);
+
+
+
+const staticRoutes = require('./routes/static');
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "assets")));
+
+
+
+app.use('/', staticRoutes);
+
+
+app.use(staticController.index);
+
+
 
 module.exports = app;
