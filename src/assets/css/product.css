@@ -1,0 +1,50 @@
+.product-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+ 
+}
+.product-form .btn{
+    margin-top: 50px; 
+    margin-left: -25px;
+}
+.product-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+   
+}
+
+.product__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product__price {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.product__description {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    font: inherit;
+    border: 1px solid #f4623a;
+    color: #f4623a;
+    background: #343a40;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+.btn:hover {
+    background-color: #f4623a;
+color: #343a40;
+}
