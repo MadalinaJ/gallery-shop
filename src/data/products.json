@@ -1,0 +1,12 @@
+[
+    {"id":"5db7a6f502b5e62d305c38c2",
+        "title":"a print",
+        "imageUrl":"https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg",
+        "description":"first print added",
+        "price":"21"},
+        {"id":"5db7aad602b5e62d305c38c3",
+            "title":"another print",
+            "imageUrl":"https://www.publicdomainpictures.net/en/view-image.php?image=191510&picture=lady-on-vintage-postcard",
+            "description":"super cool",
+            "price":"23"}
+        ]

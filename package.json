@@ -2,10 +2,16 @@
   "name": "gallery-shop",
   "version": "1.0.0",
   "description": "e-commerce",
-  "main": "src/server.js",
+  "main": "src/app.js",
+  "engines": {
+    "node": "12.7.0"
+  },
   "scripts": {
     "test": "export NODE_ENV=test&& jasmine",
-    "start": "node src/server.js"
+    
+    "start": "NODE_ENV=production MONGO_USER=user MONGO_PASSWORD=password MONGO_DEFAULT_DATABASE=database node app.js",
+    "start-server": "node app.js",
+    "start:dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -23,12 +29,21 @@
     "request": "^2.88.0"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.2.0",
+    "csurf": "^1.10.0",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "jquery": "^3.4.1",
     "jquery.easing": "^1.4.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "popper.js": "^1.16.0"
   }
 }

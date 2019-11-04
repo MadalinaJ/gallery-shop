@@ -1,0 +1,42 @@
+.form-control {
+  margin-top: 50px;
+   margin-left: -120px;
+  
+  }
+  
+  .form-control label {
+    display: block;
+    width: 100%;
+  
+  }
+  .form-control input,
+  .form-control textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  
+  }
+  
+  .form-control input{border: 1px solid #a1a1a1;
+    font: inherit;
+    border-radius: 2px;
+    margin-left: 105%;
+    margin-top: -13%;
+    padding-bottom: 5%;
+  }
+  .form-control textarea {
+    border: 1px solid #a1a1a1;
+    font: inherit;
+    border-radius: 2px;
+    padding-bottom: 20%;
+    margin-left: 105%;
+    margin-top: -12%;
+  }
+  
+  .form-control input:focus,
+  .form-control textarea:focus {
+    outline-color: #00695c;
+
+  }
+ 
+  
