@@ -11,17 +11,17 @@ router.get('/shop', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
-router.get('/products/:productId', shopController.getProduct);
+router.get('/products/:productId', isAuth(['user','admin']),shopController.getProduct);
 
-router.get('/cart', isAuth, shopController.getCart);
+router.get('/cart', isAuth(['user','admin']), shopController.getCart);
 
-router.post('/cart', isAuth, shopController.postCart);
+router.post('/cart', isAuth(['user','admin']), shopController.postCart);
 
-router.post('/cart-delete-item', isAuth, shopController.postCartDeleteProduct);
+router.post('/cart-delete-item', isAuth(['user','admin']), shopController.postCartDeleteProduct);
 
-router.post('/create-order', isAuth, shopController.postOrder);
+router.post('/create-order', isAuth(['user','admin']), shopController.postOrder);
 
-router.get('/orders', isAuth,shopController.getOrders);
+router.get('/orders', isAuth(['user','admin']),shopController.getOrders);
 
 module.exports = router;
 

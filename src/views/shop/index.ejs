@@ -8,8 +8,10 @@
 
 <body>
     <%- include('../static/partials/navbar.ejs') %>
-
-    <main>
+    <div class='justDiv1'> </div>
+    <div class='justDiv1'></div>
+    <main style="position: absolute; z-index: 1; margin-top: -6%;">
+            
         <% if (prods.length > 0) { %>
             <div class="grid">
                 <% for (let product of prods) { %>
@@ -21,6 +23,7 @@
                             <img src="<%= product.imageUrl %>"
                                 alt="<%= product.title %>">
                         </div>
+                        
                         <div class="card__content">
                             <h2 class="product__price">$<%= product.price %></h2>
                             <p class="product__description"><%= product.description %></p>
@@ -38,4 +41,21 @@
             <h1>No Products Found!</h1>
         <% } %>
     </main>
+    <div class='justDiv'> </div>
+    <div class='justDiv2'></div>
+    <div class='justDiv1'> </div>
+    <div class='justDiv'> </div>
+    <div class='justDiv2'></div>
+    <div class='justDiv1'> </div>
+    <div class='justDiv'> </div>
+    <div class='justDiv'></div>
+    <div class='justDiv'> </div>
+    <div class='justDiv'></div>
+    <div class='justDiv1'> </div>
+    <div class='justDiv'> </div>
+    <div class='justDiv2'></div>
+    <div class='justDiv'> </div>
+    <div class='justDiv'></div>
+    <div class='justDiv'></div>
+    <div class='justDiv'> placeholder</div>
 <%- include('../static/partials/end.ejs') %>

@@ -8,9 +8,8 @@ const flash = require('connect-flash');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
-
 const User = require('./models/user');
-
+//const ensureAdmin = require('../middleware/admin'.ensureAdmin);
 const MongoDBStore = require('connect-mongodb-session')(session);
 
 const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
@@ -57,13 +56,16 @@ app.use((req, res, next) => {
   if (!req.session.user) {
     return next();
   }
+
   User.findById(req.session.user._id)
     .then(user => {
       req.user = user;
+      
       next();
     })
     .catch(err => console.log(err));
 });
+
 
 app.use((req, res, next) => {
   res.locals.isAuthenticated = req.session.isLoggedIn;
