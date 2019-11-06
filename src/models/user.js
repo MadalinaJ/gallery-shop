@@ -15,6 +15,12 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  roles: {
+    type: String,
+    enum: ['user', 'admin'],
+    required: true,
+    default: 'user'
+},
   cart: {
     items: [
       {
@@ -29,6 +35,19 @@ const userSchema = new Schema({
   }
 });
 
+
+userSchema.methods.hasRole = function (role) {
+  for (var i = 0; i < this.roles.length; i++) {
+    if (this.roles[i] === role) {
+      // if the role that we are checking matches the 'role' we are
+      // looking for return true
+      return true;
+    }
+
+  };
+  // if the role does not match return false
+  return false;
+};
 userSchema.methods.addToCart = function(product) {
   const cartProductIndex = this.cart.items.findIndex(cp => {
     return cp.productId.toString() === product._id.toString();

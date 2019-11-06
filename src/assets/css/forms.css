@@ -1,12 +1,14 @@
 .form-control {
-  margin-top: 50px;
+  margin-top: 100px;
    margin-left: -120px;
+   background-color: #343a40;
   
   }
   
   .form-control label {
     display: block;
     width: 100%;
+    color: #f4623a;
   
   }
   .form-control input,
@@ -14,6 +16,8 @@
     display: block;
     width: 100%;
     margin-bottom: 5px;
+    background-color: #343a40;
+    color: #f4623a;
   
   }
   
@@ -23,6 +27,8 @@
     margin-left: 105%;
     margin-top: -13%;
     padding-bottom: 5%;
+    background-color: #343a40;
+    color: #f4623a;
   }
   .form-control textarea {
     border: 1px solid #a1a1a1;
@@ -39,4 +45,7 @@
 
   }
  
-  
+  .form-control input.invalid,
+.form-control textarea.invalid {
+  border-color: #f4623a;
+}
