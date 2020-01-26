@@ -1,5 +1,6 @@
 <%- include('../static/partials/head.ejs') %>
     <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/creative.css">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                             </p>
                         </div>
                         <div class="card__actions">
-                            <a href="/shop/products/<%= product._id %>" class="btn">Details</a>
+                            <a href="/shop/products/<%= product._id %>" class="btn" style="background-color: #606197; color:white;">Details</a>
                             <% if (isAuthenticated) { %>
                             <%- include('../static/partials/add-to-cart.ejs', {product: product}) %>
                             <% } %>

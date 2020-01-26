@@ -1,6 +1,7 @@
 <%- include('../static/partials/head.ejs') %>
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/creative.css">
 </head>
 
 <body>
@@ -11,7 +12,7 @@
                 <div class="user-message user-message--error"><%= errorMessage %></div>
             <% } %>
         <form class="login-form" action="/signup" method="POST" novalidate>
-            <div class="form-control">
+            <div class="form-control"style="margin-top: 40px">
                 <label for="email">E-Mail</label>
                 <input 
                     class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
@@ -20,7 +21,7 @@
                     id="email" 
                     value="<%= oldInput.email %>">
             </div>
-            <div class="form-control">
+            <div class="form-control" style="margin-top: 40px">
                 <label for="password">Password</label>
                 <input 
                 class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>"
@@ -29,7 +30,7 @@
                 id="password" 
                 value="<%= oldInput.password %>">
             </div>
-            <div class="form-control">
+            <div class="form-control"style="margin-top: 40px">
                 <label for="confirmPassword">Confirm Password</label>
                 <input 
                     class="<%= validationErrors.find(e => e.param === 'confirmPassword') ? 'invalid' : '' %>"
@@ -39,7 +40,7 @@
                     value="<%= oldInput.confirmPassword %>">
             </div>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button class="btn" type="submit">Signup</button>
+            <button class="btn" style="background-color: #606197;margin-top: 30px; color:white; margin-left: 40%" type="submit">Signup</button>
         </form>
     </main>
 <%- include('../static/partials/end.ejs') %>

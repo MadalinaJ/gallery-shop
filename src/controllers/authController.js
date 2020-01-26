@@ -9,8 +9,7 @@ const User = require('../models/user');
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-     api_key:''
-       
+    api_key:'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'
     }
   })
 );
@@ -155,12 +154,13 @@ exports.postSignup = (req, res, next) => {
      from: 'shop@mada.com',
      subject: 'Signup succeeded!',
      html: '<h1>yaay!signed up! go back logIn and have fun browsing the shop :D </h1>'
-   });
- })
- .catch(err => {
-   console.log(err);
- });
+    });
+    })
+    .catch(err => {
+      console.log(err);
+    });
 };
+
 exports.postLogout = (req, res, next) => {
   req.session.destroy(err => {
     console.log(err);

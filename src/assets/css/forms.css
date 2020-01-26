@@ -1,4 +1,4 @@
-.form-control {
+/* .form-control {
   margin-top: 100px;
    margin-left: -120px;
    background-color: #343a40;
@@ -48,4 +48,37 @@
   .form-control input.invalid,
 .form-control textarea.invalid {
   border-color: #f4623a;
+} */
+
+.form-control {
+  margin: 1rem 0;
+  
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+  
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #606197;
+  
+}
+
+.form-control input.invalid,
+.form-control textarea.invalid {
+  border-color:  #606197;
 }

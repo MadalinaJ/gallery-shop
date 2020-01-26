@@ -8,10 +8,33 @@
 
 <body>
     <%- include('../static/partials/navbar.ejs') %>
-    <div class='justDiv1'> </div>
-    <div class='justDiv1'></div>
-    <main style="position: absolute; z-index: 1; margin-top: -6%;">
-            
+    <div class="navbar navbar-expand-lg navbar-light bg-light">  
+        <div class="container" style="margin-left: 150px;">
+            <ul class="navbar-nav ml-auto" style="padding: 20px;">
+                    <li class="nav-item active"></li>
+                            <a class="nav-link" style="padding: 20px; color: #606197; font-weight: bold;font-size:18px;" href="#">Make your home uniquely you!
+                                  <span class="sr-only">(current)</span>
+                                </a>
+                          </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" style="padding: 20px; font-size:18px;color: #606197;" href="/">Home
+                            <span class="sr-only">(current)</span>
+                          </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" style="padding: 20px;font-size: 18px;color: #606197;" href="#contact">Paintings</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" style="padding: 20px; font-size: 18px;color: #606197;" href="#contact">Mixed Media</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" style="padding: 20px; font-size: 18px;color: #606197;" href="#contact">Digital Prints</a>
+                    </li>
+                  </ul>  
+         
+     </div>
+     </div>
+    <main>      
         <% if (prods.length > 0) { %>
             <div class="grid">
                 <% for (let product of prods) { %>
@@ -29,7 +52,7 @@
                             <p class="product__description"><%= product.description %></p>
                         </div>
                         <div class="card__actions">
-                            <a href="/shop/products/<%= product._id %>" class="btn">Details</a>
+                            <a href="/shop/products/<%= product._id %>" class="btn" style="background-color: #606197; color:white;">Details</a>
                             <% if (isAuthenticated) { %>
                                 <%- include('../static/partials/add-to-cart.ejs', {product: product}) %>
                             <% } %>
@@ -41,21 +64,4 @@
             <h1>No Products Found!</h1>
         <% } %>
     </main>
-    <div class='justDiv'> </div>
-    <div class='justDiv2'></div>
-    <div class='justDiv1'> </div>
-    <div class='justDiv'> </div>
-    <div class='justDiv2'></div>
-    <div class='justDiv1'> </div>
-    <div class='justDiv'> </div>
-    <div class='justDiv'></div>
-    <div class='justDiv'> </div>
-    <div class='justDiv'></div>
-    <div class='justDiv1'> </div>
-    <div class='justDiv'> </div>
-    <div class='justDiv2'></div>
-    <div class='justDiv'> </div>
-    <div class='justDiv'></div>
-    <div class='justDiv'></div>
-    <div class='justDiv'> placeholder</div>
 <%- include('../static/partials/end.ejs') %>
