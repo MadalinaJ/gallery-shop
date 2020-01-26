@@ -8,6 +8,7 @@ const flash = require('connect-flash');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const errorController = require('./controllers/error');
 const User = require('./models/user');
 //const ensureAdmin = require('../middleware/admin'.ensureAdmin);
 const MongoDBStore = require('connect-mongodb-session')(session);
@@ -78,7 +79,7 @@ app.use('/', staticRoutes);
 app.use('/shop', shopRoutes);
 app.use(authRoutes);
 
-app.use(staticController.index);
+app.use(staticController.indexz);
 app.use(adminController.getProducts);
 app.use(adminController.getAddProduct);
 app.use(adminController.postAddProduct);
@@ -93,7 +94,7 @@ app.use(shopController.getCart);
 app.use(shopController.postCart);
 app.use(shopController.postCartDeleteProduct);
 app.use(shopController.getOrders);
-
+app.use(errorController.get404);
 mongoose
   .connect(MONGODB_URI)
   .then(result => {

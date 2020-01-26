@@ -7,14 +7,19 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 main {
   padding: 1rem;
   margin: auto;
 }
-
+h2 {
+  font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+}
+h3 {
+  font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+}
 form {
   display: inline;
 }
@@ -34,7 +39,7 @@ form {
 .main-header {
   width: 100%;
   height: 3.5rem;
-  background-color: #00695c;
+  background-color: #606197;;
   padding: 0 1.5rem;
   display: flex;
   /* align-items: center; */
@@ -192,8 +197,8 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid #f4623a;
-  color: #343a40;
+  border: 1px solid white;
+  color:  #606197;
   background: white;
   border-radius: 3px;
   cursor: pointer;
@@ -201,18 +206,18 @@ form {
 
 
 .btn:active {
-  background-color: #343a40;
+  background-color:  #606197;
   color: white;
 }
 
 .btn.danger {
-  color: red;
-  border-color: red;
+  color: #606197;
+  border-color: white;
 }
 
 .btn.danger:hover,
 .btn.danger:active {
-  background: red;
+  background: #696ab4;
   color: white;
 }
 
@@ -224,4 +229,18 @@ form {
   #side-menu-toggle {
     display: none;
   }
+}
+.product-page-img{ 
+  text-align: center;
+  background-color: #696ab4;
+}
+.product-page-descript{
+  text-align: center;
+  font-size: 12px;
+  font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.measurements{
+  display: block;
+  width: 120px;
 }

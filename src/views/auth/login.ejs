@@ -1,6 +1,7 @@
 <%- include('../static/partials/head.ejs') %>
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/creative.css">
 </head>
 
 <body>
@@ -11,7 +12,7 @@
             <div class="user-message user-message--error"><%= errorMessage %></div>
         <% } %>
     <form class="login-form" action="/login" method="POST">
-        <div class="form-control">
+        <div class="form-control"style="margin-top: 10px">
             <label for="email">E-Mail</label>
             <input 
                     class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
@@ -21,17 +22,17 @@
                     value="<%= oldInput.email %>">
             </div>
 
-        <div class="form-control">
+        <div class="form-control" style="margin-top: 40px">
             <label for="password">Password</label>
              <input 
                     class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>"
                     type="password" 
                     name="password" 
                     id="password" 
-                    value="<%= oldInput.password %>">
+                    value="<%= oldInput.password %>">    
             </div>
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <button class="btn" type="submit">Login</button>
+        <button class="btn" style="background-color: #606197;margin-top: 30px; color:white; margin-left: 40%;" type="submit">Login</button>
     </form>
 </main>
 <%- include('../static/partials/end.ejs') %>

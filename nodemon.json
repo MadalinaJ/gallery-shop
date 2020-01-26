@@ -1,0 +1,8 @@
+{
+    "env": {
+        "MONGO_USER": "mads3",
+        "MONGO_PASSWORD": "enTer7tiMeS",
+        "MONGO_DEFAULT_DATABASE": "shop"
+       
+    }
+}

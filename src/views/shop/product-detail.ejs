@@ -1,25 +1,236 @@
-<%- include('../static/partials/head.ejs') %>
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Gallery Shop</title>
 <link rel="stylesheet" href="/css/product.css">
+<link rel="stylesheet" href="/css/creative.css">
+<link href="/css/creative.min.css" rel="stylesheet">
+<link href="/css/application.css" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/application.css">
+<style>
+    .carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+</style>
+
+<body>
     </head>
-
-    <body>
-        <%- include('../static/partials/navbar.ejs') %>
-        <main class="centered">
-                <h1 style="margin-top: 30px;font-family: Arial, Helvetica, sans-serif;
-                font-size: 24px;
-                text-align: center;"><%= product.title %></h1>
-                <p><a class="nav-link js-scroll-trigger" href="/#portfolio"style="font-size: 17px;color: black;font-weight: bold;">See in Gallery</a></p>
-                <hr>
-                <div class="photos">
-                    <img src="<%= product.imageUrl %>"  alt="<%= product.title %>">
-                    
+    <body style="font-family: 'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif;">
+        <%- include('../static/partials/navbar.ejs') %>    
+         
+    <section class="page-section bg-light text-black" style="padding-top: 20px" id="about">  
+     
+     
+            <div class="row">
+ <!-- <div class="row"> --> 
+      
+            <div class="col-md-7 mb-5">
+              <div class="card h-100">
+                <div class="card-body">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" style=" width: 50%;" src="<%= product.imageUrl %>"  alt="<%= product.title %>">
+                    <div class="product-page-descript">
+                        <h3><%= product.title %></h3>
+                        <h3><%= product.price %>$</h3>
+                    </div>  
+                   
+                  <div class="btn-gallery">    
+                      <button type="button" class="btn btn-primary" style="background-color:  rgb(142, 142, 212);color: white; border-color: white; box-shadow: white" data-toggle="modal" data-target="#modalQuickView">gallery</button>
+                 </div> 
+                   </div>
+                   
+            <!--the gallery modal-->
+                    <div class="modal fade" id="modalQuickView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                            <!--Carousel Wrapper-->
+                              <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+                                         data-ride="carousel">
+                            <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                                 <div class="carousel-item active">
+                                    <img class="d-block w-100"
+                                      src="/images/mousyRoom copy.jpg"
+                                      alt="First slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                      src="/images/mousyRoom copy 2.jpg"
+                                      alt="Second slide">
+                                    </div>
+                                     <div class="carousel-item">
+                                        <img class="d-block w-100"
+                                        src="/images/mousyRoom copy.jpg"
+                                        alt="Third slide">
+                                    </div>
+                                    </div>
+                                <!--/.Slides-->
+                                <!--Controls-->
+                                <a class="carousel-control-prev" style="color:  #5f60a1" href="#carousel-thumb" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon"  style="background-color:  #5f60a1" aria-hidden="true"></span>
+                                 <span class="sr-only" style="color:  #5f60a1">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" style="color: #5f60a1" href="#carousel-thumb" role="button" data-slide="next" style="color:blueviolet">
+                                 <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:  #5f60a1"></span>
+                                 <span class="sr-only" style="color:  #5f60a1">Next</span>
+                                </a>
+                              <!--/.Controls-->    
+                                  <div class="text-center">   
+                                    <button type="button" class="btn btn-secondary" style="color:white;"data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                            <!--/.Carousel Wrapper-->
+                                 </div> 
+                                </div>
+                               </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            
+                          </div>
+                  </div>            
+                
                 </div>
-                <h2><%= product.price %>$</h2>
-                <p><%= product.description %></p>
-                <% if (isAuthenticated) { %>
-                    <%- include('../static/partials/add-to-cart.ejs', {product: product}) %>
-                <% } %>
-            </main>
-        <%- include('../static/partials/end.ejs') %>
+            <!-- <div class="row"> -->     
+                           
+                    <div class="col-md-4 mb-5">
+                      <div class="card h-100">
+                        <div class="card-body">
+                    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                      <!-- Accordion card -->
+                      <div class="card">
+        
+                        <!-- Card header -->
+                        <div class="card-header" role="tab" id="headingOne1" style="background-color: rgb(142, 142, 212)">
+                          <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                            aria-controls="collapseOne1" style="color: white">
+                            <h5 class="mb-0" style="color: white">
+                              Description <i class="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                          </a>
+                        </div>
+        
+                        <!-- Card body -->
+                        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                          data-parent="#accordionEx">
+                          <div class="card-body" style="text-align: justify">
+                              <%= product.description %>
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3
+                            wolf moon officia aute,
+                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                          </div>
+                        </div>
+      
+                        <div class="card-footer">
+                            <!--<a href="#" class="btn btn-primary btn-sm" style="font-family: 'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif;">More Info</a>-->
+                          </div>
+
+                          <div class="col-md-4 mb-5">
+                               <div class="col-md-5">
+                                   <select class="md-form mdb-select colorful-select dropdown-primary">
+                                      <option value="" disabled selected>Choose your option</option>
+                                      <option value="1">12"x16"</option>
+                                      <option value="2">Black</option>
+                                      <option value="3">Pink</option>
+                                    </select>
+                                      <label class="measurements">Select color</label>
+                               </div>
+                         <div class="col-md-5">
+                                <select class="md-form mdb-select colorful-select dropdown-primary">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">XS</option>
+                                    <option value="2">S</option>
+                                   <option value="3">L</option>
+                                  </select>
+                                 <label class="measurements">Select size</label>
+                              </div>
+                              <div class="col-md-12" style= "width: 350px;">
+                              <% if (isAuthenticated) { %>
+                                <%- include('../static/partials/add-to-cart.ejs', {product: product}) %>
+                            <% } %>
+                          </div>
+                         </div>
+                         
+                                      
+                      </div>
+                    </div>
+                </div>
+              </div>
+            
+          </div>
+          
+       <!-- third row -->    
+          
+         <!-- <div class="row">    
+            <div class="col-md-4 mb-5">
+              <div class="card h-100">
+                <div class="card-body">
+                        <div class="col-md-6">
+        
+                          <select class="md-form mdb-select colorful-select dropdown-primary">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">12"x16"</option>
+                            <option value="2">Black</option>
+                            <option value="3">Pink</option>
+                          </select>
+                          <label>Select color</label>
+        
+                        </div>
+
+                        <div class="col-md-6">
+        
+                          <select class="md-form mdb-select colorful-select dropdown-primary">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">XS</option>
+                            <option value="2">S</option>
+                            <option value="3">L</option>
+                          </select>
+                          <label>Select size</label>
+                        </div>
+
+                      </div>
+                      <div class="card-footer">
+                          
+                        </div>
+                    </div>
+                  </div>
+                 
+            </div>-->
+                   
+ <!-- Modal: modalQuickVie -->          
+        </section>
+      <!-- Footer -->
+<footer class="bg-light py-6">
+        <div class="container">
+          <div class="small text-center text-muted">mj&copy; 2019</div>
+        </div>
+</footer>
+ <!-- Bootstrap core JavaScript -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    
+    <script src="js/creative.min.js"></script>
+    <script src="js/agency.min.js"></script>
+    
+    <script>$(document).ready(function() {
+            $('.mdb-select').materialSelect();
+            });</script>
+  </body>
+</html>

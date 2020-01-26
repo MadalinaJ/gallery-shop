@@ -1,0 +1,26 @@
+<%- include('../static/partials/head.ejs') %>
+<link rel="stylesheet" href="/css/product.css">
+<link rel="stylesheet" href="/css/creative.css">
+<link href="/css/creative.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <%- include('../static/partials/navbar.ejs') %>    
+        
+         <main class="centered">
+               
+                <div class="photos">
+                    <img src="<%= product.imageUrl %>"  alt="<%= product.title %>">
+                    
+                </div> 
+                <h1 style="margin-top: 30px;font-family: Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                text-align: center;"><%= product.title %></h1>
+                <h2><%= product.price %>$</h2>
+                <p><%= product.description %></p>
+                <% if (isAuthenticated) { %>
+                    <%- include('../static/partials/add-to-cart.ejs', {product: product}) %>
+                <% } %>
+                </main>
+            
+
+        <%- include('../static/partials/end.ejs') %> 

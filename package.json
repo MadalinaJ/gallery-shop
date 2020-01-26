@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "export NODE_ENV=test&& jasmine",
-    "start": "NODE_ENV=production MONGO_USER=user MONGO_PASSWORD=password MONGO_DEFAULT_DATABASE=database node app.js",
+    "start": "NODE_ENV=production MONGO_USER=mads3 MONGO_PASSWORD=enTer7tiMeS MONGO_DEFAULT_DATABASE=shop node app.js",
     "start-server": "node src/app.js",
     "start:dev": "nodemon src/app.js"
   },
