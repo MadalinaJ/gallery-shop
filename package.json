@@ -36,7 +36,7 @@
     "csurf": "^1.10.0",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.0",
     "express-validator": "^6.2.0",
     "jquery": "^3.4.1",
